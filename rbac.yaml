@@ -64,13 +64,12 @@ rules:
   #
   # at the HTTP level, the name of the resource for accessing Secret
   # objects is "secrets"
-  resources: ["nodes","persistentvolume","namespace"]
+  resources: ["nodes","persistentvolumes","namespaces"]
   verbs: ["get", "list", "watch"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-# This role binding allows "dave" to read secrets in the "development" namespace.
-# You need to already have a ClusterRole named "secret-reader".
-kind: RoleBinding
+# This cluster role binding allows anyone in the "manager" group to read secrets in any namespace.
+kind: ClusterRoleBinding
 metadata:
   name: expense
 subjects:
@@ -81,3 +80,4 @@ roleRef:
   kind: ClusterRole
   name: expense
   apiGroup: rbac.authorization.k8s.io
+
