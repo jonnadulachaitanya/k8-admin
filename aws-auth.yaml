@@ -12,7 +12,7 @@ data:
       userarn: arn:aws:iam::596059882666:user/suresh
       username: suresh
     - groups:
-      - expense-trainee
+      - expense-admin
       userarn: arn:aws:iam::596059882666:user/ramesh
       username: ramesh
 metadata:
