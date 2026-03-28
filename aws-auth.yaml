@@ -12,10 +12,9 @@ data:
       userarn: arn:aws:iam::596059882666:user/suresh
       username: suresh
     - groups:
-      - expense-admin
+      - expense-trainee
       userarn: arn:aws:iam::596059882666:user/ramesh
       username: ramesh
-kind: ConfigMap
 metadata:
   creationTimestamp: "2026-03-28T09:05:11Z"
   name: aws-auth
